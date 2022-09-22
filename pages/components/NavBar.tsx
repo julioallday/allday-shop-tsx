@@ -1,7 +1,7 @@
 import { Butterfly, List } from "phosphor-react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
-export default function Navbar() {
+export default function NavBar() {
   const sideBarRef: any = useRef();
 
   const [hasUserClicked, setHasUserClicked] = useState(false);
@@ -14,9 +14,9 @@ export default function Navbar() {
     sideBarRef.current.classList.toggle("-translate-x-full");
   }
   return (
-    <div className="max-h-screen md:sticky md:top-0 z-50 text-white">
+    <div className="md:sticky md:top-0 z-50 text-white ">
       {/* mobile sideBar */}
-      <div className="bg-lime-500 rounded-b-md flex justify-evenly p-2 items-center sticky top-0 z-30 md:transform md:-translate-y-full md:ease-in-out duration-200">
+      <div className="bg-lime-500 flex justify-evenly p-2 items-center sticky top-0 z-30 sm:transform sm:translate-y-0 lg:ease-in-out md:transform md:-translate-y-full md:ease-in-out duration-200">
         <div>
           <a href="./">
             <Butterfly
@@ -28,7 +28,7 @@ export default function Navbar() {
         </div>
         <a
           href="./"
-          className="hidden text-white font-extrabold text-3xl text-transparent bg-clip-text bg-gradient-to-tr from-lime-400 to-neutral-900 hover:from-neutral-900 hover:to-lime-400 "
+          className="text-white font-extrabold text-3xl text-transparent bg-clip-text bg-gradient-to-tr from-lime-600 to-neutral-900 hover:from-neutral-900 hover:to-lime-600 "
         >
           Fruto e Fruta
         </a>
@@ -48,10 +48,10 @@ export default function Navbar() {
       <div
         ref={sideBarRef}
         className=" bg-lime-600 space-y-0 text-gray-900 absolute mt-0 pt-0 inset-y-0 left-0 transform -translate-x-full
-        w-64 h-screen px-4 md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0 flex "
+        md:w-64  lg: h-screen px-4 md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0 flex "
       >
         <nav className="flex flex-col grow space-y-3 border mt-0 mb-4 bg-lime-500 border-zinc-300 hover:border-lime-500 rounded-t-full">
-          <div className=" flex-wrap mt-8 justify-center">
+          <div className="  mt-8 justify-center">
             <div className="">
               <Butterfly
                 className="mx-auto mt-0 hover:animate-ping mb-2"
@@ -66,7 +66,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="mt-10 mb-4">
-            <ul className="m-4">
+            <ul className="m-4 grid gap-10">
               <li className="mb-2 px-4 py-4 bg-lime-600 border-x-2 hover:border-gray-900 text-gray-100 font-extrabold flex flex-row hover:font-bold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 border-lime-300 hover:text-neutral-900 hover:bg-lime-600  rounded-lg">
                 <span>
                   <svg className="fill-current h-5 w-5 " viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ export default function Navbar() {
             <div className="grid grid-cols-1">
               <button
                 onClick={toogleSideBar}
-                className="block md:hidden font-extrabold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-red-600 hover:text-yellow-500 m-2 px-4 py-2 rounded-md border border-lime-600 bg-lime-600  text-zinc-900"
+                className="block md:hidden font-extrabold focus:ring transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:bg-red-600 hover:text-yellow-500 m-2 px-4 py-2 rounded-md border border-lime-600 bg-lime-600  text-zinc-900"
               >
                 Fechar
               </button>
