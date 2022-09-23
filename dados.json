@@ -1,0 +1,77 @@
+{
+  "produtos": [
+    {
+      "id": "produtos/1",
+      "nome": "Tofu Macio Orgânico Ecobras Bandeja 270g",
+      "preco": "R$23,99",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/56/22374056.PNG?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/2",
+      "nome": "Salada Mistinha MIL GREEN 350g",
+      "preco": "R$16,79",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/981/574981.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/3",
+      "nome": "Batata Pré Frita Swift 400g",
+      "preco": "R$7,96",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/358/19735358.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/4",
+      "nome": "Cenoura 500g",
+      "preco": "R$2,49",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/625/13421625.PNG?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/5",
+      "nome": "Abóbora Seca QUALITÁ 400g",
+      "preco": "R$6,79",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/404/517404.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/6",
+      "nome": "Cenora Ralada Higienizada QUALITÁ 250g",
+      "preco": "R$6,99",
+      "url": "⦁https://static.clubeextra.com.br/img/uploads/1/889/10736889.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/7",
+      "nome": "Pimentão Amarelo a Granel 250g",
+      "preco": "R$4,22",
+      "url": "⦁https://static.clubeextra.com.br/img/uploads/1/332/12813332.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/8",
+      "nome": "Pimentão Vermelho Extra a Granel 250g",
+      "preco": "R$4,22",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/133/12810133.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/9",
+      "nome": "Curau FRUTOS DO CAMPO 160g",
+      "preco": "R$84,99",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/922/12168922.png?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/10",
+      "nome": "Abóbora Batã 500g",
+      "preco": "R$4,45",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/278/22364278.jpg?im=Resize,width=200"
+    },
+    {
+      "id": "produtos/11",
+      "nome": "Curau FRUTOS DO CAMPO 160g",
+      "preco": "R$84,99",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/922/12168922.png?im=Resize,width=200"
+    },
+
+    {
+      "id": "produtos/12",
+      "nome": "Curau FRUTOS DO CAMPO 160g",
+      "preco": "R$84,99",
+      "url": "https://static.clubeextra.com.br/img/uploads/1/922/12168922.png?im=Resize,width=200"
+    }
+  ]
+}

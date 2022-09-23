@@ -1,5 +1,7 @@
 import { Butterfly, List } from "phosphor-react";
+
 import { useRef, useState } from "react";
+
 
 export default function NavBar() {
   const sideBarRef: any = useRef();
