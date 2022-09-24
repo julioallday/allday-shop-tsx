@@ -9,10 +9,9 @@ import EspacamentoYColorido from "./components/EspacamentoColorido";
 import NavBar from "./components/NavBar";
 import Dados from "../dados.json";
 
-
 const Home: NextPage = () => {
   const [cards, setCards] = useState(0);
-  const dadosProduto = Dados;
+  const produtos = Dados;
 
   return (
     <div>
@@ -33,10 +32,10 @@ const Home: NextPage = () => {
           <EspacamentoYColorido />
           <br />
           <div className="md:mt-20 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3">
-            {dadosProduto.produtos.map((produto) => (
+            {produtos.produtos.map((produto, index) => (
               <ItemCard
                 key={produto.id}
-                hRef={produto.id}
+                hRef={`http://localhost:3000/produtos?id=${produto.id}`}
                 className="mt-2"
                 src={produto.url}
                 titulo={produto.nome}

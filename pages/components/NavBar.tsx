@@ -50,7 +50,7 @@ export default function NavBar() {
       <div
         ref={sideBarRef}
         className=" bg-lime-600 space-y-0 text-gray-900 absolute mt-0 pt-0 inset-y-0 left-0 transform -translate-x-full
-        md:w-64  lg: h-screen px-4 md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0 flex "
+        md:w-64 sm:fixed lg: h-screen px-4 md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0 flex "
       >
         <nav className="flex flex-col grow space-y-3 border mt-0 mb-4 bg-lime-500 border-zinc-300 hover:border-lime-500 rounded-t-full">
           <div className="  mt-8 justify-center">
