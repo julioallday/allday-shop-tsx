@@ -43,9 +43,6 @@ const Home: NextPage = () => {
 
 
   }, [])
-
-
-
   return (
     <>
 
