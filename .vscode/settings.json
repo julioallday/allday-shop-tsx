@@ -6,26 +6,29 @@
   "editor.formatOnSave": true, // Tell VSCode to format files on save
   "editor.defaultFormatter": "esbenp.prettier-vscode", // Tell VSCode to use Prettier as default file formatter
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#740065",
+    "activityBar.activeBackground": "#007413",
     "activityBar.activeBorder": "#130080",
-    "activityBar.background": "#4b1a49",
+    "activityBar.background": "#1a4b30",
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#800080",
+    "activityBarBadge.background": "#008000",
     "activityBarBadge.foreground": "#e7e7e7",
     "sash.hoverBorder": "#19044b",
-    "statusBar.background": "#3f093c",
+    "statusBar.background": "#093f24",
     "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#330831",
-    "statusBarItem.remoteBackground": "#33082f",
+    "statusBarItem.hoverBackground": "#08331b",
+    "statusBarItem.remoteBackground": "#08331b",
     "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#330833",
+    "titleBar.activeBackground": "#08331b",
     "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#2e0833",
+    "titleBar.inactiveBackground": "#08331b",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.remoteColor": "#410000",
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }

@@ -1,16 +1,32 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
+import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import dados from "../dados.json";
+import NavBar from "./components/NavBar";
+import Rodape from "./components/Rodape";
 
 export default function Post() {
-  const router = useRouter();
-  const dadoRouter = router.query.id;
+  const curtidaRef: any = useRef();
+
+  const [hasUserClicked, setHasUserClicked] = useState(false)
+
+  function handleClick() {
+    setHasUserClicked(!hasUserClicked);
+  }
+
+  function toogleSideBar() {
+    curtidaRef.current.classList.toggle("text-red-600");
+  }
+
+  useEffect(() => {
+
+
+  },[])
+
   const [produtoAtual, setProdutoAtual] = useState({
     nome: "",
-    preco: "",
-    url: "",
+    valor: "",
+    descricao: "",
+    imagem:""
   });
 
   useEffect(() => {
@@ -20,23 +36,94 @@ export default function Post() {
     if(idProduto != undefined)
     {
 
-    const produtoAtualTemp = dados.produtos.find((element) => {return element.id.toString() == idProduto;});
+    const produtoAtualTemp = dados.find((element) => {return element.id.toString() == idProduto;});
     if (produtoAtualTemp != undefined)
       {
-      setProdutoAtual(produtoAtualTemp);
+      setProdutoAtual({
+        nome: produtoAtualTemp.title,
+        valor: produtoAtualTemp.price.toString(),
+        descricao: produtoAtualTemp.description,
+        imagem: produtoAtualTemp.image
+      })
       }
     }
   }, []);
+  
 
   return (
-    <div>
-      <ul>
-        <li>
-          <button type="button" onClick={() => router.push("")}>
-            dfsjdfjisodhfsodh
+    <div className="md:flex min-h-screen relative">
+      <NavBar/>
+      <div className="grid grid-cols-1 mx-auto w-full inset-0">
+        <section className="text-gray-600 body-font overflow-hidden">
+        <div className="container px-5 sm:px-20 gap-1 py-24 mx-auto">
+          <div className="lg:w-4/5 mx-auto items-center  flex flex-wrap md:flex-col ">
+            <img
+              alt="ecommerce"
+              className="w-1/2 h-2/3 mx-auto lg:h-auto h-64 object-cover object-center rounded"
+              src={produtoAtual.imagem}
+            />
+            <div className="lg:w-fill w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 className="text-3xl title-font font-medium mb-1 title-font text-gray-500 tracking-widest">
+              {produtoAtual.nome}
+              </h2>
+
+        <p className="leading-relaxed">
+          {produtoAtual.descricao}
+        </p>
+        <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+          <div className="flex ml-6 items-center">
+            <span className="mr-3">Quantidade</span>
+            <div className="relative">
+              <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                <option>1x</option>
+                <option>10x</option>
+                <option>20x</option>
+                <option>50x</option>
+              </select>
+              <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex">
+          <span className="title-font font-medium text-2xl text-white">
+            ${produtoAtual.valor}
+          </span>
+          <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+            Adicionar ao carrinho
           </button>
-        </li>
-      </ul>
+          <button ref={curtidaRef} onClick={toogleSideBar} className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"> 
+            <svg
+              fill="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+            
+            >
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Rodape/>
+</section>
+
+</div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 {
-  "name": "fruto_e_fruta_tsx",
+  "name": "allday-shop-tsx",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "flowbite": "^1.5.3",
     "flowbite-react": "^0.1.11",
     "next": "12.3.1",
@@ -28,8 +29,9 @@
     "tailwindcss": "^3.1.8",
     "typescript": "4.8.3"
   },
-  "description": "Website Ecomerce voltado a produtos veganos e naturais, ",
+  "description": "Website de vendas de produtos eletronicos",
   "main": "index.js",
   "author": "julioallday <naruto481@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/julioallday/fruto_e_fruta_tsx.git"
 }
