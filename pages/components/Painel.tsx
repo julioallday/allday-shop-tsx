@@ -3,10 +3,12 @@
 export default function Painel() {
 
   return (<>
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600  body-font">
       <div className="container py-16 mx-auto lg:flex flex-nowrap">
-        <div className="lg:w-2/3 mx-auto">
-          <div className="flex  w-full bg-gray-100 py-32 px-10 relative mb-4">
+        <div className="w-2/3  mx-auto">
+          <div className="flex w-full bg-gray-100 py-32 px-10 relative mb-4">
+
+            {/* DEVO DECODIFICAR CONTEÚDO DA URL GIGANTE */}
             <img
               alt="galeria"
               className="w-full hover:border transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 object-cover h-full object-center opacity-80 block absolute inset-0"
@@ -97,7 +99,6 @@ export default function Painel() {
                     ="
 
             />
-
             <div className="text-center relative z-10 w-full">
               <h2 className="text-2xl text-amber-500 font-medium title-font mb-2">
               </h2>
@@ -107,12 +108,12 @@ export default function Painel() {
               </a>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-2">
-            <div className="px-2 w-1/2">
-              <div className="flex flex-wrap w-full  bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+          <div className="flex flex-col sm:flex-row items-center flex-wrap -mx-2">
+            <div className="px-2 w-full sm:w-1/2">
+              <div className="flex flex-wrap bg-gray-100 sm:py-24 py-16  px-6 relative">
                 <img
                   alt="galeria"
-                  className="w-full  object-cover h-full object-center opacity-80 block absolute inset-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 hover:border"
+                  className="md:w-full object-cover h-full object-center opacity-80 block absolute inset-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 hover:border"
                   src="https://www.meupositivo.com.br/panoramapositivo/wp-content/uploads/2020/08/computador-de-alta-performance.jpg"
                 />
                 <div className="text-center relative z-10 w-full">
@@ -137,8 +138,8 @@ export default function Painel() {
                 </div>
               </div>
             </div>
-            <div className="px-2 w-1/2">
-              <div className="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+            <div className="px-2 py-5 w-full sm:w-1/2 ">
+              <div className="flex flex-wrap  w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
                 <img
                   alt="galeria"
                   className="w-full object-cover h-full object-center block opacity-80 absolute inset-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 hover:border"

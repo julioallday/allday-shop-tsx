@@ -1,17 +1,19 @@
-export default function Aplicativo() {
+import Link from "next/link";
+
+export default function SessaoAplicativo() {
   return (
     <>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto flex h-[50rem]  justify-center flex-col items-center md:flex-row ">
-          <div className="flex flex-col justify-center md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
-            <h2 className=" text-white sm:ml-44 text-6xl tracking-widest font-medium title-font mb-1">
+        <div className=" bg-gray-500/20 px-5 py-24 w-full flex h-[50rem] justify-center flex-col items-center lg:justify-end lg:flex-row ">
+          <div className="flex flex-col justify-center gap-32 sm:gap-16 md:pr-10 md:mb-0 mb-6 pr-0 md:w-auto md:text-left text-center">
+            <h2 className=" text-white lg:ml-44 text-6xl tracking-widest font-medium title-font mb-1">
               Baixe nosso aplicativo
             </h2>
             <h1 className="md:text-3xl text-2xl font-medium title-font text-gray-900">
-
             </h1>
           </div>
-          <div className="flex md:ml-auto md:mr-0 mx-auto sm:pr-24 gap-10 items-center flex-shrink-0 space-x-4">
+          <div className="flex flex-col md:ml-auto md:mr-0 mx-auto md:pr-24 lg:mr-12 gap-10 items-center flex-shrink-0 ">
+           <Link href="">
             <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +28,8 @@ export default function Aplicativo() {
                 <span className="title-font font-medium">Google Play</span>
               </span>
             </button>
+            </Link>
+            <Link href={''}>
             <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,14 +41,14 @@ export default function Aplicativo() {
                 <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z" />
               </svg>
               <span className="ml-4 flex items-start flex-col leading-none">
-                <span className="text-xs text-gray-600 mb-1">Download on the</span>
+                <span className="text-xs w- text-gray-600 mb-1">Download on the</span>
                 <span className="title-font font-medium">App Store</span>
               </span>
             </button>
+            </Link>
           </div>
         </div>
       </section>
-
     </>
   )
 }

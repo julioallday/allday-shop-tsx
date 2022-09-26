@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { List } from "phosphor-react";
+import { Binoculars, List } from "phosphor-react";
 
 import { useRef, useState } from "react";
 
@@ -24,10 +24,11 @@ export default function NavBar() {
 
 
     <div className="max-h-screen md:sticky md:top-0 z-50 text-white py-0 inset-0">
+  
 
-      {/* mobile sideBar */}
-      <div className="bg-gray-400  md:hidden flex justify-evenly p-2 items-center sticky top-0 z-30">
-        <div className="bg-gray-400 w-full h-32">
+      {/*MOBILE SIDEBAR*/}
+      <div className="bg-gray-400 h-14 md:hidden flex justify-evenly p-2 items-center sticky top-0 z-30">
+        <div className="bg-gray-400 h-14 w-full ">
 
 
         </div>
@@ -49,11 +50,11 @@ export default function NavBar() {
         </button>
       </div>
 
-      {/* main sideBar */}
+      {/*SIDEBAR PRINCIPAL*/}
       <div
         ref={sideBarRef}
-        className=" bg-gray-400 md:bg-gray-500 w-56 space-y-0 text-gray-900 absolute inset-y-0 left-0 transform -translate-x-full
-        md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out flex flex-col child:transition-all md:max-h-screen md:min-h-screen md:sticky md:top-0"
+        className=" bg-gray-400 md:bg-gray-500/20  w-56 space-y-0 text-gray-900 absolute inset-y-0 left-0 transform -translate-x-full
+        md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out flex flex-col child:transition-all md:max-h-screen md:min-h-screen md:top-0"
       >
         <nav className="flex flex-col w-52 grow space-y-3 border ml-2 mt-0 mb-4 bg-gray-400 border-zinc-300 hover:border-white rounded-t-full">
           <div className="mt-10 justify-center">
@@ -145,7 +146,7 @@ export default function NavBar() {
 
                 </li>
               </Link>
-              <Link href="">
+              <Link href="#rodape">
                 <li className="mb-2 px-4 py-4 bg-gray-900 border-x-2 hover:border-gray-900 text-gray-100 font-extrabold flex flex-row hover:font-bold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 border-gray-200 hover:text-neutral-900 hover:bg-[#F4F2F0] rounded-lg">
                   <span>
                     <svg className="fill-current h-5 w-5" viewBox="0 0 24 24">
@@ -171,6 +172,7 @@ export default function NavBar() {
               >
                 Fechar
               </button>
+              
             </div>
           </div>
         </nav>

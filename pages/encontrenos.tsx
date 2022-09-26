@@ -1,4 +1,6 @@
+// COMPONENTES
 import NavBar from "./components/NavBar";
+
 
 export default function encontrenos() {
     return(<>

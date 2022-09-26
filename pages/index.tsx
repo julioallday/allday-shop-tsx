@@ -1,71 +1,73 @@
-
+// FUNCIONAIS
 import type { NextPage } from "next";
-import Head from "next/head";
-
 import { useEffect, useState } from "react";
-
 import axios from "axios";
 
-import Dados from "../dados.json";
-
+// COMPONENTES
+import Head from "next/head";
 
 import NavBar from "./components/NavBar";
 
+import Painel from "./components/Painel";
 
 import ItemCard from "./components/itemCard";
 
-import Painel from "./components/Painel";
-
-import Aplicativo from "./components/Aplicativo";
+import SessaoAplicativo from "./components/SessaoAplicativo";
 
 import Rodape from "./components/Rodape";
+import { Binoculars } from "phosphor-react";
+
+
 
 
 const Home: NextPage = () => {
-  
-  const produtos = Dados;
+
+  const [produtos, setProdutos] = useState([{
+    id: "",
+    title: "",
+    price: "",
+    image: "",
+    description: "",
+  }])
+
+  // CONEXÃO COM API
+  useEffect(() => {
+
+    axios.get("https://fakestoreapi.com/products/category/electronics")
+      .then((response) => {
+        setProdutos(response.data);
+      })
+      .catch(() => (error: any) => {
+        console.log(error);
+      });
 
 
-useEffect(() => {
-  var axios = require('axios');
-
-  var config = {
-    method: 'get',
-    url: 'https://fakestoreapi.com/products/category/electronics',
-    headers: { }
-  };
-  
-  axios(config)
-  .then(function (response:any) {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch(function (error:any) {
-    console.log(error);
-  });
-  
-  
-}, [])
+  }, [])
 
 
 
   return (
     <>
-      <Head>
-        <title>AllDay Shopp.</title>
 
+      <Head>
+        <title>AllDay Shop</title>
         <meta
           name="description"
           content="Produtos veganos, orgânicos e naturais. Somos a empresa mais jovem a conquistar o selo eureciclo - O selo eureciclo garante um sistema de logística reversa para a reciclagem da quantidade de material equivalente a que a Fruto e Fruta coloca no mercado através da compensação ambiental. Dessa forma, o impacto negativo da embalagem está sendo compensado do meio ambiente e a cadeia de reciclagem está sendo valorizada"
         />
       </Head>
-      <div id="fundoPrincipal" className="md:flex bg-scroll bg-auto bg-no-repeat bg- min-h-screen relative">
+      <div id="fundoPrincipal" className="md:flex min-h-screen relative">
+      <div className="absolute bottom-32 right-60">
+                <Binoculars size={32} weight="duotone" />
+              </div>
         <NavBar />
-          <div className="w-full inset-0">
-            <div className="grid grid-cols-1">
-              <Painel/>
-                <div id="produtos" className="grid grid-cols-1 md:mt-20 md:grid md:grid-cols-2 sm:gap-1 md:gap-0 lg:gap-4 lg:grid-cols-3">
-                {produtos.map((produto, index) => ( index <= 11 ?
-              
+        <div className="w-full">
+          <div className="grid grid-cols-1">
+            <Painel />
+            <div id="produtos" className="grid grid-cols-1 md:mt-20 md:grid sm:grid-cols-2 sm:gap-0 md:gap-0 lg:gap-4 lg:grid-cols-3">
+              {/* CARDS */}
+              {produtos.map((produto, index) => (index <= 11 ?
+
                 <ItemCard
                   key={produto.id}
                   hRef={`http://localhost:3000/produtos?id=${produto.id}`}
@@ -74,20 +76,17 @@ useEffect(() => {
                   titulo={produto.title}
                   conteudo={produto.price.toString()}
                 />
-                : null))}
-
+                : null
+                ))}
             </div>
             <div className="grid grid-cols-1 justify-center">
-
-
-            <Aplicativo/>
-
-            <Rodape/>
+              <SessaoAplicativo />
+              <Rodape />
             </div>
           </div>
         </div>
       </div>
-      </>
+    </>
   );
 };
 

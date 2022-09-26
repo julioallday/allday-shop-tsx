@@ -49,7 +49,7 @@ export default function ItemCard(children: CardsProps) {
                 className="bg-gray-200 font-extrabold focus:ring transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 group-hover:bg-gray-600 border-black hover:border-teal-600 rounded-3xl w-36 h-10 ml-2 mb-5"
                 data-ripple-light="true"
               >
-              <Link href={children.hRef}><a>Comprar</a></Link>
+                <Link href={children.hRef}><a>Comprar</a></Link>
               </button>
             </div>
           </div>
