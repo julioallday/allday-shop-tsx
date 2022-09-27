@@ -24,10 +24,10 @@ export default function Rodape() {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            <span className="ml-3 text-xl">AllDay Shop</span>
+            <span className="ml-3 text-xl">AllDay Shop ©</span>
           </a>
           <p className="text-sm text-gray-500 md:ml-4 md:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-            © 2022 AllDay Shop —
+             2022 AllDay Shop —
             <a
               href="https://julioallday.github.io"
               className="text-black m-auto text-xl ml-[-7.75rem]"

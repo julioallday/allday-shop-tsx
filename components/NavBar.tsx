@@ -23,9 +23,7 @@ export default function NavBar() {
   return (
 
 
-    <div className="max-h-screen md:sticky md:top-0 z-50 text-white py-0 inset-0">
-  
-
+    <div className="max-h-screen fixed md:sticky md:top-0 z-50 text-white py-0 inset-0">
       {/*MOBILE SIDEBAR*/}
       <div className="bg-gray-400 h-14 md:hidden flex justify-evenly p-2 items-center sticky top-0 z-30">
         <div className="bg-gray-400 h-14 w-full ">
@@ -56,7 +54,7 @@ export default function NavBar() {
         className=" bg-gray-400 md:bg-gray-500/20  w-56 space-y-0 text-gray-900 absolute inset-y-0 left-0 transform -translate-x-full
         md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out flex flex-col child:transition-all md:max-h-screen md:min-h-screen md:top-0"
       >
-        <nav className="flex flex-col w-52 grow space-y-3 border ml-2 mt-0 mb-4 bg-gray-400 border-zinc-300 hover:border-white rounded-t-full">
+        <nav className="flex flex-col w-52 grow space-y-3  border ml-2 mt-0 mb-4 bg-gray-400 border-zinc-300 hover:border-white rounded-t-full">
           <div className="mt-10 justify-center">
             <div className="translate-x-[70px] mb-8">
 

@@ -1,12 +1,13 @@
+import { Dropdown } from "flowbite-react";
 import React, { useRef } from "react";
 
 import { useEffect, useState } from "react";
 
 import dados from "../dados.json";
 
-import NavBar from "./components/NavBar";
+import NavBar from "../components/NavBar";
 
-import Rodape from "./components/Rodape";
+import Rodape from "../components/Rodape";
 
 
 export default function Post() {
@@ -62,17 +63,24 @@ export default function Post() {
             <div className="lg:w-4/5 mx-auto items-center  flex flex-wrap md:flex-col ">
               <img
                 alt="ecommerce"
-                className="w-1/2 h-2/3 mx-auto lg:h-auto h-64 object-cover object-center rounded"
+                className="max-w-[77%] h-[8rem] mx-auto lg:h-auto h-64 object-center rounded"
                 src={produtoAtual.imagem}
               />
               <div className="lg:w-fill w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h2 className="text-3xl title-font font-medium mb-1 title-font text-gray-500 tracking-widest">
+                <h2 className="md:text-2xl title-font font-medium mb-1 title-font text-gray-500 tracking-widest">
                   {produtoAtual.nome}
                 </h2>
 
-                <p className="leading-relaxed">
+
+                <Dropdown label="Dropdown button">
+                  <Dropdown.Item>
+                  <p className="leading-relaxed">
                   {produtoAtual.descricao}
                 </p>
+                  </Dropdown.Item>
+         
+                </Dropdown>
+               
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                   <div className="flex ml-6 items-center">
                     <span className="mr-3">Quantidade</span>
