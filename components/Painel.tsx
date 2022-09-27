@@ -8,7 +8,7 @@ export default function Painel() {
         <div className="w-2/3  mx-auto">
           <div className="flex w-full bg-gray-100 py-32 px-10 relative mb-4">
 
-            {/* DEVO DECODIFICAR CONTEÚDO DA URL GIGANTE */}
+            {/* DEVO DECODIFICAR, CONTEÚDO DA URL GIGANTE */}
             <img
               alt="galeria"
               className="w-full hover:border transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 object-cover h-full object-center opacity-80 block absolute inset-0"
@@ -121,20 +121,6 @@ export default function Painel() {
                   </h2>
                   <p className="leading-relaxed">
                   </p>
-                  <a className="mt-3 text-purple-500 inline-flex items-center">
-
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      className="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
@@ -150,19 +136,6 @@ export default function Painel() {
                   </h2>
                   <p className="leading-relaxed">
                   </p>
-                  <a className="mt-3 text-purple-500 inline-flex items-center">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      className="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>

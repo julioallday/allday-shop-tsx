@@ -1,30 +1,39 @@
-import { Dropdown } from "flowbite-react";
+
 import React, { useRef } from "react";
 
 import { useEffect, useState } from "react";
 
 import dados from "../dados.json";
 
-import NavBar from "./components/NavBar";
-
-import Rodape from "./components/Rodape";
+import NavBar from "../components/NavBar";
+import { Dropdown } from "flowbite-react";
+import Rodape from "../components/Rodape";
+import nookies from 'nookies'
 
 
 export default function Post() {
   const curtidaRef: any = useRef();
 
+  function cookiesCurtida() {
+    nookies.set(null, 'curtiuProduto', 'true', {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/',
+    })
+  }
+
   const [hasUserClicked, setHasUserClicked] = useState(false)
 
   function handleClick() {
-    setHasUserClicked(!hasUserClicked);
+
   }
 
-  function toogleSideBar() {
-    curtidaRef.current.classList.toggle("text-red-600");
+  function curtidaProduto() {
+    curtidaRef.current.classList.toggle("text-red-500");
+    setHasUserClicked(!hasUserClicked);
+    cookiesCurtida()
   }
 
   useEffect(() => {
-
 
   }, [])
 
@@ -63,24 +72,18 @@ export default function Post() {
             <div className="lg:w-4/5 mx-auto items-center  flex flex-wrap md:flex-col ">
               <img
                 alt="ecommerce"
-                className="max-w-[77%] h-[8rem] mx-auto lg:h-auto h-64 object-center rounded"
+                className="max-w-[77%] h-[8rem] mx-auto lg:h-[30rem] h-64 object-center rounded"
                 src={produtoAtual.imagem}
               />
               <div className="lg:w-fill w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="md:text-2xl title-font font-medium mb-1 title-font text-gray-500 tracking-widest">
                   {produtoAtual.nome}
                 </h2>
-
-
-                <Dropdown label="Dropdown button">
-                  <Dropdown.Item>
-                  <p className="leading-relaxed">
-                  {produtoAtual.descricao}
-                </p>
-                  </Dropdown.Item>
-         
-                </Dropdown>
-               
+                <Dropdown.Item>
+                  <p className="leading-relaxed rounded-md">
+                    {produtoAtual.descricao}
+                  </p>
+                </Dropdown.Item>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                   <div className="flex ml-6 items-center">
                     <span className="mr-3">Quantidade</span>
@@ -114,7 +117,7 @@ export default function Post() {
                   <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                     Adicionar ao carrinho
                   </button>
-                  <button ref={curtidaRef} onClick={toogleSideBar} className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <button ref={curtidaRef} onClick={curtidaProduto} className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center ml-4">
                     <svg
                       fill="currentColor"
                       strokeLinecap="round"

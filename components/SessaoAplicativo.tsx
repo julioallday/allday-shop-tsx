@@ -5,7 +5,7 @@ export default function SessaoAplicativo() {
     <>
       <section className="text-gray-600 body-font">
         <div className=" bg-gray-500/20 px-5 py-24 w-full flex h-[50rem] justify-center flex-col items-center lg:justify-end lg:flex-row ">
-          <div className="flex flex-col justify-center gap-32 sm:gap-16 md:pr-10 md:mb-0 mb-6 pr-0 md:w-auto md:text-left text-center">
+          <div className="flex flex-col justify-center md:pr-10 md:mb-0 mb-6 pr-0 md:w-auto md:text-left text-center">
             <h2 className=" text-white lg:ml-44 text-6xl tracking-widest font-medium title-font mb-1">
               Baixe nosso aplicativo
             </h2>
@@ -13,7 +13,7 @@ export default function SessaoAplicativo() {
             </h1>
           </div>
           <div className="flex flex-col md:ml-auto md:mr-0 mx-auto md:pr-24 lg:mr-12 gap-10 items-center flex-shrink-0 ">
-           <Link href="">
+           <Link href="https://play.google.com/store/games?utm_source=latam_Med&utm_medium=hasem&utm_content=Jul1520&utm_campaign=Evergreen&pcampaignid=MKT-FDR-latam-br-1002290-Med-hasem-py-Evergreen-Jul1520-Text_Search_BKWS-28432345789&gclid=CjwKCAjwvsqZBhAlEiwAqAHElQ9XuKTN0vxYILcB-g9DJouYQB7z45i1E18jxPGcUq7tl99t0KPKgxoCO-oQAvD_BwE&gclsrc=aw.ds">
             <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function SessaoAplicativo() {
               </span>
             </button>
             </Link>
-            <Link href={''}>
+            <Link href={'https://www.apple.com/br/app-store/'}>
             <button className="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 // COMPONENTES
-import NavBar from "./components/NavBar";
+import NavBar from "../components/NavBar";
 
 import imagemMergulhador from 'public/icone-mergulhador.svg'
 import Image from "next/image";
