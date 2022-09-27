@@ -20,19 +20,20 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.7",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
-    "autoprefixer": "^10.4.11",
+    "autoprefixer": "^10.4.12",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
-    "typescript": "4.8.3"
+    "typescript": "^4.8.3"
   },
   "description": "Website de vendas de produtos eletronicos",
   "main": "index.js",
   "author": "julioallday <naruto481@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/julioallday/fruto_e_fruta_tsx.git"
+  "repository": "https://github.com/julioallday/allday-shop-tsx.git"
 }

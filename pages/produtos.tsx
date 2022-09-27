@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 
 import dados from "../dados.json";
 
-import NavBar from "../components/NavBar";
+import NavBar from "./components/NavBar";
 
-import Rodape from "../components/Rodape";
+import Rodape from "./components/Rodape";
 
 
 export default function Post() {

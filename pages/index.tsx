@@ -7,12 +7,12 @@ import nookies from 'nookies'
 // COMPONENTES
 import Head from "next/head";
 import dados from "../dados.json"
-import NavBar from "../components/NavBar";
-import Mostruario from "../components/Mostruario";
-import Painel from "../components/Painel";
-import ItemCard from "../components/itemCard";
-import SessaoAplicativo from "../components/SessaoAplicativo";
-import Rodape from "../components/Rodape";
+import NavBar from "./components/NavBar";
+import Mostruario from "./components/Mostruario";
+import Painel from "./components/Painel";
+import ItemCard from "./components/itemCard";
+import SessaoAplicativo from "./components/SessaoAplicativo";
+import Rodape from "./components/Rodape";
 
 
 const Home: NextPage = () => {
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     salvarCookies();
 
-  const request = axios.get("https://fakestoreapi.com/products/category/electronics")
+    const request = axios.get("https://fakestoreapi.com/products/category/electronics")
       .then((response) => {
         setProdutos(response.data);
       })
@@ -56,18 +56,19 @@ const Home: NextPage = () => {
 
 
   }, [])
-function carregarInicio() {}
+  function carregarInicio() { }
 
   return (
     <>
 
       <Head>
-        <title>AllDay Shop</title>
+        <title>AllDay Shop ©</title>
         <meta
           name="description"
           content="Produtos veganos, orgânicos e naturais. Somos a empresa mais jovem a conquistar o selo eureciclo - O selo eureciclo garante um sistema de logística reversa para a reciclagem da quantidade de material equivalente a que a Fruto e Fruta coloca no mercado através da compensação ambiental. Dessa forma, o impacto negativo da embalagem está sendo compensado do meio ambiente e a cadeia de reciclagem está sendo valorizada"
         />
       </Head>
+
       <div id="fundoPrincipal" className="md:flex min-h-screen relative">
         {/* NAVBAR */}
         <NavBar />
@@ -75,7 +76,8 @@ function carregarInicio() {}
           <div className="grid grid-cols-1">
             <Mostruario />
             <Painel />
-            <div id="produtos" className="grid grid-cols-1 md:mt-20 md:grid sm:grid-cols-2 sm:gap-0 md:gap-0 lg:gap-4 lg:grid-cols-3">
+
+            <div id="produtos" className="grid grid-cols-1 py-16 rounded-t-3xl md:mt-20 md:grid sm:grid-cols-2 sm:gap-0 md:gap-0 lg:gap-4 lg:grid-cols-3">
               {/* CARDS */}
               {produtos.map((produto, index) => (index <= 11 ?
 

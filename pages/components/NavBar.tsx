@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 export default function NavBar() {
   const tituloDaPagina = "AllDay Shop"
 
-  const ancoras = ["Home", "Produtos", "Encontre-nos", "Fale Conosco"]
+  const ancoras = ["Home", "Produtos", "Newsletter", "Contato"]
 
   const sideBarRef: any = useRef();
 
@@ -22,21 +22,11 @@ export default function NavBar() {
   }
   return (
 
-
     <div className="max-h-screen fixed md:sticky md:top-0 z-50 text-white py-0 inset-0">
       {/*MOBILE SIDEBAR*/}
       <div className="bg-gray-400 h-14 md:hidden flex justify-evenly p-2 items-center sticky top-0 z-30">
         <div className="bg-gray-400 h-14 w-full ">
-
-
         </div>
-        <a
-          href="./"
-          className="text-white font-extrabold text-3xl text-transparent bg-clip-text bg-gradient-to-tr from-lime-600 to-neutral-900 hover:from-neutral-900 hover:to-lime-600 "
-        >
-
-        </a>
-
         <button
           onClick={toogleSideBar}
           className="rounded focus:bg-gray-600 hover:animate-bounce"
@@ -47,11 +37,10 @@ export default function NavBar() {
           />
         </button>
       </div>
-
       {/*SIDEBAR PRINCIPAL*/}
       <div
         ref={sideBarRef}
-        className=" bg-gray-400 md:bg-gray-500/20  w-56 space-y-0 text-gray-900 absolute inset-y-0 left-0 transform -translate-x-full
+        className=" bg-gray-400 md:bg-gray-500/20 w-56 space-y-0 text-gray-900 absolute inset-y-0 left-0 transform -translate-x-full
         md:relative md:translate-x-0 z-50 transition duration-200 ease-in-out flex flex-col child:transition-all md:max-h-screen md:min-h-screen md:top-0"
       >
         <nav className="flex flex-col w-52 grow space-y-3  border ml-2 mt-0 mb-4 bg-gray-400 border-zinc-300 hover:border-white rounded-t-full">
@@ -66,7 +55,7 @@ export default function NavBar() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  className="w-16 h-16 text-white p-2 bg-gray-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 rounded-full"
+                  className="w-16 h-16 text-white p-2 bg-gray-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 rounded-full"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -74,7 +63,7 @@ export default function NavBar() {
               </Link>
             </div>
             <div className="mx-auto text-center">
-              <span className="text-white  font-extrabold text-3xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-transparent bg-clip-text bg-gradient-to-tr  from-neutral-900 to-yellow-300 hover:from-yellow-300 hover:to-neutral-900 ">
+              <span className="text-white font-extrabold text-3xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-transparent bg-clip-text bg-gradient-to-tr  from-neutral-900 to-yellow-300 hover:from-yellow-300 hover:to-neutral-900 ">
                 <a href="./">
                   {tituloDaPagina}</a>
               </span>
@@ -126,7 +115,7 @@ export default function NavBar() {
                   </button>
                 </li>
               </Link>
-              <Link href="/encontrenos">
+              <Link href="/newsletter">
                 <li className="mb-2 px-4 py-4 bg-gray-900 border-x-2 hover:border-gray-900 text-gray-100 font-extrabold flex flex-row hover:font-bold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 border-gray-200 hover:text-neutral-900 hover:bg-[#F4F2F0] rounded-lg">
                   <span>
                     <svg className="fill-current h-5 w-5 " viewBox="0 0 24 24">
@@ -170,12 +159,10 @@ export default function NavBar() {
               >
                 Fechar
               </button>
-              
             </div>
           </div>
         </nav>
       </div>
     </div>
-
   );
 }

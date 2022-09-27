@@ -1,4 +1,4 @@
-import dados from "../dados.json"
+import dados from "../../dados.json"
 
 
 export default function Mostruario () {
