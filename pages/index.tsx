@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import nookies, { parseCookies } from 'nookies'
+import { useRouter } from 'next/router'
 
 // COMPONENTES
 import Head from "next/head";
@@ -16,6 +17,9 @@ import Mapa from "../components/Mapa";
 
 
 const Home: NextPage = () => {
+
+  const router = useRouter()
+  console.log(router.query);
 
   const btnCookieRef: any = useRef()
 
@@ -82,7 +86,7 @@ const Home: NextPage = () => {
 
                       <ItemCard
                         key={produto.id}
-                        hRef={`http://localhost:3000/produtos?id=${produto.id}`}
+                        hRef={`https://allday-shop-git-main-julioallday.vercel.app/produtos?id=${produto.id}`}
                         className="mt-2"
                         src={produto.image}
                         titulo={produto.title}
