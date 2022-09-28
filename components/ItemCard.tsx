@@ -40,7 +40,7 @@ export default function ItemCard(children: CardsProps) {
               <div className="card-body group m-auto pr-2 w-44">
                 <Link href={children.hRef}>
                   <a>
-                    <h4 className="font-semibold my-auto ">{children.titulo.substring(0, 25)}...</h4>
+                    <h4 className="font-semibold my-auto ">{children.titulo.substring(0, 20)}...</h4>
                   </a>
                 </Link>
                 <p className="opcacity-60 mb-4">${children.conteudo}</p>
