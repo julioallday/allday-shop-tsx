@@ -38,7 +38,7 @@ export default function ItemCard(children: CardsProps) {
               <div className="card-body  mx-auto justify-center group m-auto w-44">
                 <Link href={children.hRef}>
                   <a>
-                    <h4 className="font-black mx-auto text-amber-500 prose prose-xl bg-black/20 rounded-lg my-auto ">{children.titulo.substring(0, 20)}...</h4>
+                    <h4 className="font-black mx-auto text-amber-500 my-auto prose prose-xl bg-black/20 rounded-lg my-auto ">{children.titulo.substring(0, 20)}...</h4>
                   </a>
                 </Link>
                 <p className="text-black font-inter font-semiblack mb-4">${children.conteudo}</p>
