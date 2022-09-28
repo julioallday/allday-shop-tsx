@@ -19,7 +19,7 @@ import Mapa from "../components/Mapa";
 const Home: NextPage = () => {
 
   const router = useRouter()
-  console.log(router.query);
+  const urlParamsAtual = (router.query.id);
 
   const btnCookieRef: any = useRef()
 
@@ -86,7 +86,7 @@ const Home: NextPage = () => {
 
                       <ItemCard
                         key={produto.id}
-                        hRef={`https://allday-shop-git-main-julioallday.vercel.app/produtos?id=${produto.id}`}
+                        hRef={`/produtos?id=${produto.id}`}
                         className="mt-2"
                         src={produto.image}
                         titulo={produto.title}
