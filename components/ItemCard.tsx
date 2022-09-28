@@ -24,7 +24,7 @@ export default function ItemCard(children: CardsProps) {
               </Link>
             </div>
           </div>
-          <div className="relative max-w-md mb-12 mx-auto xl:max-w-2xl min-w-0 break-words bg-white shadow-lg rounded-xl">
+          <div className="relative max-w-md mb-12 mx-auto xl:max-w-2xl h-52 min-w-0 break-words bg-white shadow-lg rounded-xl">
             <div className="card grid gap-2 pt-5 justify-center w-52">
               <div className=" card-header m-auto mx-4">
                 <Link href={children.hRef}>
