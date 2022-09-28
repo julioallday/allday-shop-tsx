@@ -78,7 +78,7 @@ const Home: NextPage = () => {
                   <Painel />
                   <div id="produtos" className="grid grid-cols-1 py-16 rounded-t-3xl md:mt-20 sm:grid-cols-2 sm:gap-0 md:gap-0 lg:gap-4 lg:grid-cols-3 xl:grid-cols-4">
                     {/* CARDS */}
-                    {produtos.map((produto, index) => (index <= 11 ?
+                    {produtos.map((produto, index) => (index <= 5 ?
 
                       <ItemCard
                         key={produto.id}
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
                       : null
                     ))}
 
-                    {dadosNativos.map((produto, index) => (index <= 20 ?
+                    {dadosNativos.map((produto, index) => (index <= 14 ?
 
                       <ItemCard
                         key={produto.id}

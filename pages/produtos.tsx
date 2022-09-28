@@ -71,11 +71,15 @@ export default function Post() {
         <section className="text-gray-600 body-font overflow-hidden">
           <div className="container px-5 sm:px-20 gap-1 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto items-center  flex flex-wrap md:flex-col ">
+              <div className="bg-gray-700 rounded-xl p-8">
+              <div className="bg-white p-8 pt-16 rounded">
               <img
                 alt="ecommerce"
                 className="max-w-[77%] h-[8rem] mx-auto md:h-[20rem] lg:h-[26rem] object-center rounded"
                 src={produtoAtual.imagem}
               />
+              </div>
+              </div>
               <div className="lg:w-fill w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="md:text-2xl title-font font-medium mb-1 title-font text-gray-500 tracking-widest">
                   {produtoAtual.nome}
