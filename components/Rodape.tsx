@@ -1,4 +1,5 @@
 import axios from "axios"
+import Link from "next/link"
 import { useEffect } from "react"
 
 
@@ -11,7 +12,7 @@ export default function Rodape() {
     <div id="rodape" className=" bg-cover w-full bg-gray-500 h-96">
       <footer className="text-gray-600 body-font">
         <div className="container gap-24 px-5 py-8 mx-auto flex items-center  flex-col">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <Link href={'./'}><a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,17 +26,17 @@ export default function Rodape() {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
             <span className="ml-3 text-xl">AllDay Shop ©</span>
-          </a>
+          </a></Link>  
           <p className="text-sm text-gray-500 md:ml-4 md:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-             2022 AllDay Shop —
-            <a
-              href="https://julioallday.github.io"
+            2022 AllDay Shop —
+            <Link href="https://github.com/julioallday/allday-shop-tsx"><a
               className="text-black m-auto text-xl ml-[-7.75rem]"
               rel="noopener noreferrer"
               target="_blank"
             >
-              https://julioallday.github.io
+              https://github.com/julioallday
             </a>
+            </Link>
           </p>
           <span className="inline-flex  sm:mt-0 mt-4 justify-center sm:justify-start">
             <a className="text-black">

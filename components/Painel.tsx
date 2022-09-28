@@ -1,4 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
+import mulheresNoComputador from '../public/mulheres-no-computador.jpg'
+
+import homemNoComputador from '../public/homem-no-computador.webp'
 
 export default function Painel() {
 
@@ -9,7 +13,8 @@ export default function Painel() {
           <div className="flex w-full bg-gray-100 py-32 px-10 relative mb-4">
 
             {/* DEVO DECODIFICAR, CONTEÚDO DA URL GIGANTE */}
-            <img
+            <Image
+            layout={'fill'}
               alt="galeria"
               className="w-full hover:border transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 object-cover h-full object-center opacity-80 block absolute inset-0"
               src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISEhgRFBIRERISEhEREh
@@ -111,10 +116,11 @@ export default function Painel() {
           <div className="flex flex-col sm:flex-row items-center flex-wrap -mx-2">
             <div className="px-2 w-full sm:w-1/2">
               <div className="flex flex-wrap bg-gray-100 sm:py-24 py-16  px-6 relative">
-                <img
+                <Image
+                layout="fill"
                   alt="galeria"
                   className="md:w-full object-cover h-full object-center opacity-80 block absolute inset-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 hover:border"
-                  src="https://www.meupositivo.com.br/panoramapositivo/wp-content/uploads/2020/08/computador-de-alta-performance.jpg"
+                  src={mulheresNoComputador}
                 />
                 <div className="text-center relative z-10 w-full">
                   <h2 className="text-xl text-white  hover:text-zinc-500 hover:font-bold title-font mb-2">
@@ -126,10 +132,11 @@ export default function Painel() {
             </div>
             <div className="px-2 py-5 w-full sm:w-1/2 ">
               <div className="flex flex-wrap  w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-                <img
+                <Image
+                layout="fill"
                   alt="galeria"
                   className="w-full object-cover h-full object-center block opacity-80 absolute inset-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:opacity-100 hover:border"
-                  src="https://s2.glbimg.com/PyYKOEDha85XEQt7Ch-GbfgL0FQ=/0x0:2120x1414/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2021/d/B/CKSDBCRAaG16vyHOcGgA/gettyimages-1272380213.jpg"
+                  src={homemNoComputador}
                 />
                 <div className="text-center relative z-10 w-full">
                   <h2 className="text-xl text-gray-900 font-medium title-font mb-2">

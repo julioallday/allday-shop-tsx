@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 
+import Image from "next/image";
 import Link from "next/link";
 
 interface CardsProps {

@@ -9,7 +9,7 @@ import Head from "next/head";
 import dados from "../dados.json"
 import NavBar from "../components/NavBar";
 import Painel from "../components/Painel";
-import ItemCard from "../components/itemCard";
+import ItemCard from "../components/ItemCard"
 import SessaoAplicativo from "../components/SessaoAplicativo";
 import Rodape from "../components/Rodape";
 import Mapa from "../components/Mapa";
@@ -22,6 +22,7 @@ const Home: NextPage = () => {
   const dadosNativos = dados;
 
   const [produtos, setProdutos] = useState([{
+
     id: "",
     title: "",
     price: "",
@@ -75,7 +76,7 @@ const Home: NextPage = () => {
                     </div>
                   </section>
                   <Painel />
-                  <div id="produtos" className="grid grid-cols-1 py-16 rounded-t-3xl md:mt-20 md:grid sm:grid-cols-2 sm:gap-0 md:gap-0 lg:gap-4 lg:grid-cols-3">
+                  <div id="produtos" className="grid grid-cols-1 py-16 rounded-t-3xl md:mt-20 sm:grid-cols-2 sm:gap-0 md:gap-0 lg:gap-4 lg:grid-cols-3 xl:grid-cols-4">
                     {/* CARDS */}
                     {produtos.map((produto, index) => (index <= 11 ?
 

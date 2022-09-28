@@ -9,6 +9,7 @@ import NavBar from "../components/NavBar";
 import { Dropdown } from "flowbite-react";
 import Rodape from "../components/Rodape";
 import nookies from 'nookies'
+import Image from "next/image";
 
 
 export default function Post() {
@@ -72,7 +73,7 @@ export default function Post() {
             <div className="lg:w-4/5 mx-auto items-center  flex flex-wrap md:flex-col ">
               <img
                 alt="ecommerce"
-                className="max-w-[77%] h-[8rem] mx-auto lg:h-[30rem] h-64 object-center rounded"
+                className="max-w-[77%] h-[8rem] mx-auto md:h-[20rem] lg:h-[26rem] object-center rounded"
                 src={produtoAtual.imagem}
               />
               <div className="lg:w-fill w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
